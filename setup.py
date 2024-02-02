@@ -465,6 +465,7 @@ class build_ext(build_ext_orig):
             ('LIBXML_ICONV_ENABLED', 1),
             ('LIBXML_STATIC', '1'),
             ('LIBXSLT_STATIC', '1'),
+            ('XMLSEC_NO_MD5', '1'),
             ('XMLSEC_STATIC', '1'),
             ('inline', '__inline'),
             ('UNICODE', '1'),
