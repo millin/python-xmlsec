@@ -15,6 +15,10 @@
 
 #include <xmlsec/crypto.h>
 
+#ifndef xmlSecCryptoAppKeyLoadEx
+#define xmlSecCryptoAppKeyLoadEx(filename, type, format, pwd, pwdCallback, pwdCallbackCtx) \
+    xmlSecCryptoAppKeyLoad(filename, format, pwd, pwdCallback, pwdCallbackCtx)
+#endif
 
 static PyObject* PyXmlSec_Key__new__(PyTypeObject *type, PyObject *args, PyObject *kwargs) {
     PyXmlSec_Key* key = (PyXmlSec_Key*)PyType_GenericNew(type, args, kwargs);

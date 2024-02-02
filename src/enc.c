@@ -195,7 +195,7 @@ ON_FAIL:
 
 // release the replaced nodes in a way safe for `lxml`
 static void PyXmlSec_ClearReplacedNodes(xmlSecEncCtxPtr ctx, PyXmlSec_LxmlDocumentPtr doc) {
-    PyXmlSec_LxmlElementPtr* elem;
+    PyXmlSec_LxmlElementPtr elem;
     // release the replaced nodes in a way safe for `lxml`
     xmlNodePtr n = ctx->replacedNodeList;
     xmlNodePtr nn;

@@ -13,7 +13,8 @@ from distutils import log
 from distutils.errors import DistutilsError
 from distutils.version import StrictVersion as Version
 from pathlib import Path
-from urllib.request import urlcleanup, urljoin, urlopen, urlretrieve
+from urllib.parse import urljoin
+from urllib.request import urlcleanup, urlopen, urlretrieve
 
 from setuptools import Extension, setup
 from setuptools.command.build_ext import build_ext as build_ext_orig
